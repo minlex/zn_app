@@ -1,0 +1,47 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading "> Day 1</div>
+  <div class="panel-body">
+
+    <table>
+      <tr>
+        <td>
+          Trsack 1
+        </td>
+        <td>
+          Track 2
+        </td>
+        <td>
+          Track 3
+        </td>
+        <td>
+          Track 4
+        </td>
+      </tr>
+
+
+      <tr ng-repeat="talk in talks">
+        <td>
+          
+          <span class="glyphicon glyphicon-star-empty"></span> 
+          <a href="#/agenda/{{talk[0].id}}"> {{talk[0].name}}</a>
+        </td>
+        <td>
+          <span class="glyphicon glyphicon-star-empty"></span> 
+          <a href="#/agenda/{{talk[1].id}}"> {{talk[1].name}}
+        </td>
+        <td>
+          <span class="glyphicon glyphicon-star-empty"></span> 
+          <a href="#/agenda/{{talk[2].id}}"> {{talk[2].name}}
+        </td>
+        <td>
+          <span class="glyphicon glyphicon-star-empty"></span>
+          <a href="#/agenda/{{talk[3].id}}"> {{talk[3].name}}
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  
+  
+</div>

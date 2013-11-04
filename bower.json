@@ -1,0 +1,26 @@
+{
+  "name": "zn_app",
+  "version": "0.0.0",
+  "authors": [
+    "alexmin <minozhenko@gmail.com>"
+  ],
+  "description": "zeronights 2013 sheduler",
+  "main": "index.html",
+  "keywords": [
+    "conference"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs-bower": "*",
+    "angularjs": "*",
+    "bootstrap": "~3.0.0"
+  }
+}
