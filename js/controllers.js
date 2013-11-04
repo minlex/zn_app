@@ -80,7 +80,7 @@ ZeroAppControllers.controller('SpeakerListCtrl', ['$scope','$http',
                                               
 }]);
 
-ZeroAppControllers.controller('SpeakerDetail', ['$scope','$routeParams','$http',
+ZeroAppControllers.controller('SpeakerDetailCtrl', ['$scope','$routeParams','$http',
  function SpeakerDetail($scope, $routeParams, $http) {
      $http.get('info/speakers.json').success(function(data) {
          $scope.speaker = $.grep(data, function(n) {return n.id == $routeParams.speakerId  })[0];
@@ -89,13 +89,13 @@ ZeroAppControllers.controller('SpeakerDetail', ['$scope','$routeParams','$http',
 
 }]);
 
-ZeroAppControllers.controller('FavoriteCtrl', ['$scope','$routeParams','$http',
+ZeroAppControllers.controller('FavoriteCtlr', ['$scope','$routeParams','$http',
  function FavoriteCtrl($scope, $routeParams, $http) {
      $http.get('info/talks.json').success(function(data) {
          var favorite = localStorage.favorite.split(',').slice(1);
          
-         Sscope.fav = "asd";
-//         $scope.favorites = $.grep(data, function(n) {return favorite.indexOf(n.id.toString())});
+         $scope.fav = "asd";
+         $scope.favorites = $.grep(data, function(n) {return favorite.indexOf(n.id.toString())!=-1 });
          
          });
 }]);
