@@ -23,20 +23,28 @@
       <tr ng-repeat="talk in talks">
         <td>
           
-          <span class="glyphicon glyphicon-star-empty"></span> 
+          
+          <span>{{talk[0].begintime}}</span>
           <a href="#/agenda/{{talk[0].id}}"> {{talk[0].name}}</a>
+          <p> {{talk[0].speakers}} </p>
         </td>
         <td>
-          <span class="glyphicon glyphicon-star-empty"></span> 
-          <a href="#/agenda/{{talk[1].id}}"> {{talk[1].name}}
+          
+          <span>{{talk[1].begintime}}</span>
+          <a href="#/agenda/{{talk[1].id}}"> {{talk[1].name}}</a>
+          <p> {{talk[1].speakers}} </p>
         </td>
         <td>
-          <span class="glyphicon glyphicon-star-empty"></span> 
-          <a href="#/agenda/{{talk[2].id}}"> {{talk[2].name}}
+          
+          <span>{{talk[2].begintime}}</span>
+          <a href="#/agenda/{{talk[2].id}}"> {{talk[2].name}}</a>
+            <p> {{talk[2].speakers}} </p>
         </td>
         <td>
-          <span class="glyphicon glyphicon-star-empty"></span>
-          <a href="#/agenda/{{talk[3].id}}"> {{talk[3].name}}
+          
+          <span>{{talk[3].begintime}}</span>
+          <a href="#/agenda/{{talk[3].id}}"> {{talk[3].name}}</a>
+            <p> {{talk[3].speakers}} </p>
         </td>
       </tr>
     </table>

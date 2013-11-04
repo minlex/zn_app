@@ -24,17 +24,29 @@ ZeroAppControllers.controller('AgendaCtrl', ['$scope','$http',
          var track1 = $.grep(talks, function(n){ return n.track == 1});
          var track2 = $.grep(talks, function(n){ return n.track == 2});
          var track3 = $.grep(talks, function(n){ return n.track == 3});
-         var track4 = $.grep(talks, function(n){ return n.track == 4});
+         var track4 = $.grep(talks, function(n){ return n.track == 4}); 
+         var empty = new Object();
+         empty.begintime = "";
+         empty.name = "";
+         empty.speakers = "";
          
          var talks  = [];
 
+
          for(var i = 0; i < track1.length; i++){
              var slot= [];
-             slot.push(track1[i]);
-             slot.push(track2[i]);
-             slot.push(track3[i]);
-             slot.push(track4[i]); 
-             talks.push(slot)
+             slot.push(track1[i]);            
+            
+             slot.push($.grep(track2, function(n) { return n.begintime == track1[i].begintime })[0])
+             slot.push($.grep(track3, function(n) { return n.begintime == track1[i].begintime })[0]);
+             slot.push($.grep(track4, function(n) { return n.begintime == track1[i].begintime })[0]);
+
+//             slot.push(track2[i]);            
+  //          slot.push(track3[i]);            
+    //    slot.push(track4[i]);            
+             
+             talks.push(slot);
+
              }
                         
          $scope.talks = talks
